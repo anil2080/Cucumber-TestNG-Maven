@@ -12,7 +12,7 @@
         "steps": [
           {
             "result": {
-              "duration": 14124730900,
+              "duration": 9450004000,
               "status": "passed"
             },
             "line": 5,
@@ -24,7 +24,7 @@
           },
           {
             "result": {
-              "duration": 169584200,
+              "duration": 20652200,
               "status": "passed"
             },
             "line": 6,
@@ -36,7 +36,7 @@
           },
           {
             "result": {
-              "duration": 451391600,
+              "duration": 378434500,
               "status": "passed"
             },
             "line": 7,
@@ -62,7 +62,7 @@
           },
           {
             "result": {
-              "duration": 65619500,
+              "duration": 36310300,
               "status": "passed"
             },
             "line": 8,
@@ -74,7 +74,7 @@
           },
           {
             "result": {
-              "duration": 6908600,
+              "duration": 4301600,
               "status": "passed"
             },
             "line": 9,
@@ -86,7 +86,7 @@
           },
           {
             "result": {
-              "duration": 1514688700,
+              "duration": 667824800,
               "status": "passed"
             },
             "line": 10,
@@ -104,5 +104,61 @@
     "id": "free-crm-login-feature",
     "keyword": "Feature",
     "uri": "login.feature"
+  },
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Free CRM Logout Test Scenario",
+        "description": "",
+        "id": "free-crm-logout-feature;free-crm-logout-test-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 7532062900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on home Page",
+            "match": {
+              "location": "LogoutStepDefinition.user_already_on_home_page()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4750600,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "title of home page is Free CRM",
+            "match": {
+              "location": "LogoutStepDefinition.title_of_home_page_is_free_CRM()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 829151300,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "logout \u0026 Close the browser",
+            "match": {
+              "location": "LogoutStepDefinition.close_the_browser()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Free CRM Logout Feature",
+    "description": "",
+    "id": "free-crm-logout-feature",
+    "keyword": "Feature",
+    "uri": "logout.feature"
   }
 ]

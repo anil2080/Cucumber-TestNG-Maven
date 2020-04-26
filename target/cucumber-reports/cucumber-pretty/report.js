@@ -115,14 +115,14 @@ formatter.match({
   "location": "LoginStepDefinition.user_already_on_login_page()"
 });
 formatter.result({
-  "duration": 14124730900,
+  "duration": 9450004000,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.title_of_login_page_is_free_CRM()"
 });
 formatter.result({
-  "duration": 169584200,
+  "duration": 20652200,
   "status": "passed"
 });
 formatter.match({
@@ -139,28 +139,80 @@ formatter.match({
   "location": "LoginStepDefinition.user_enters_username_and_password(String,String)"
 });
 formatter.result({
-  "duration": 451391600,
+  "duration": 378434500,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.user_clicks_on_login_button()"
 });
 formatter.result({
-  "duration": 65619500,
+  "duration": 36310300,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.user_is_on_hopme_page()"
 });
 formatter.result({
-  "duration": 6908600,
+  "duration": 4301600,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginStepDefinition.close_the_browser()"
 });
 formatter.result({
-  "duration": 1514688700,
+  "duration": 667824800,
+  "status": "passed"
+});
+formatter.uri("logout.feature");
+formatter.feature({
+  "line": 1,
+  "name": "Free CRM Logout Feature",
+  "description": "",
+  "id": "free-crm-logout-feature",
+  "keyword": "Feature"
+});
+formatter.scenario({
+  "line": 3,
+  "name": "Free CRM Logout Test Scenario",
+  "description": "",
+  "id": "free-crm-logout-feature;free-crm-logout-test-scenario",
+  "type": "scenario",
+  "keyword": "Scenario"
+});
+formatter.step({
+  "line": 5,
+  "name": "user is on home Page",
+  "keyword": "Given "
+});
+formatter.step({
+  "line": 6,
+  "name": "title of home page is Free CRM",
+  "keyword": "When "
+});
+formatter.step({
+  "line": 7,
+  "name": "logout \u0026 Close the browser",
+  "keyword": "Then "
+});
+formatter.match({
+  "location": "LogoutStepDefinition.user_already_on_home_page()"
+});
+formatter.result({
+  "duration": 7532062900,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LogoutStepDefinition.title_of_home_page_is_free_CRM()"
+});
+formatter.result({
+  "duration": 4750600,
+  "status": "passed"
+});
+formatter.match({
+  "location": "LogoutStepDefinition.close_the_browser()"
+});
+formatter.result({
+  "duration": 829151300,
   "status": "passed"
 });
 });
