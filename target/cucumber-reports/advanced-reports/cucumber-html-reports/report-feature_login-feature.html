@@ -77,7 +77,7 @@ $(document).ready(function() {
     <tr class="info">
       <td>Free CRM Project - DEMO Anil</td>
               <td>1</td>
-            <td>26 Apr 2020, 14:02</td>
+            <td>30 Apr 2020, 20:50</td>
     </tr>
   </tbody>
 </table>
@@ -130,19 +130,19 @@ $(document).ready(function() {
         <tbody>
         <tr>
           <td class="tagname">Free CRM Login Feature</td>
-                    <td      class="passed"    >6</td>
-          <td >0</td>
-          <td >0</td>
+                    <td      class="passed"    >4</td>
+          <td      class="failed"    >1</td>
+          <td     class="skipped"   >1</td>
           <td >0</td>
           <td >0</td>
           <td class="total">6</td>
 
-          <td  class="passed"    >1</td>
           <td >0</td>
+          <td  class="failed"    >1</td>
           <td class="total">1</td>
 
-          <td class="duration" data-value="10557527400">10.557</td>
-          <td class="passed">Passed</td>
+          <td class="duration" data-value="10655555600">10.655</td>
+          <td class="failed">Failed</td>
         </tr>
         </tbody>
 
@@ -174,7 +174,7 @@ $(document).ready(function() {
   </div>
 
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Feature</span>
   <span class="name">Free CRM Login Feature</span>
   
@@ -192,12 +192,12 @@ $(document).ready(function() {
   </div>
 
   
-  <span class="lead-duration duration">10.557</span>
+  <span class="lead-duration duration">10.655</span>
 
 
-    <span data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#element-1">
+    <span data-toggle="collapse" class=" collapsable-control" data-target="#element-1">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Scenario Outline</span>
   <span class="name">Free CRM Login Test Scenario</span>
   
@@ -208,15 +208,15 @@ $(document).ready(function() {
   </span>
   <div class="description indention"></div>
 
-  <div id="element-1" class="collapse collapsable-details ">
+  <div id="element-1" class="collapse collapsable-details  in ">
     
 
 
     
 <div class="steps inner-level">
-    <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#steps-2">
+    <div data-toggle="collapse" class=" collapsable-control" data-target="#steps-2">
     
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Steps</span>
   <span class="name"></span>
   
@@ -226,14 +226,14 @@ $(document).ready(function() {
 
   </div>
 
-  <div id="steps-2" class="inner-level collapse collapsable-details ">
+  <div id="steps-2" class="inner-level collapse collapsable-details  in ">
           <div class="step">
         
 <div class="brief passed">
   <span class="keyword indention">Given</span>
   <span class="name">user is already on Login Page</span>
   
-  <span class="lead-duration duration">9.450</span>
+  <span class="lead-duration duration">9.533</span>
 
   </div>
 
@@ -254,7 +254,7 @@ $(document).ready(function() {
   <span class="keyword indention">When</span>
   <span class="name">title of login page is Free CRM</span>
   
-  <span class="lead-duration duration">0.020</span>
+  <span class="lead-duration duration">0.018</span>
 
   </div>
 
@@ -275,7 +275,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">user enters &quot;anil.kumar2080@gmail.com&quot; and &quot;Test@1234&quot;</span>
   
-  <span class="lead-duration duration">0.378</span>
+  <span class="lead-duration duration">1.047</span>
 
   </div>
 
@@ -296,7 +296,7 @@ $(document).ready(function() {
   <span class="keyword indention">Then</span>
   <span class="name">user clicks on login button</span>
   
-  <span class="lead-duration duration">0.036</span>
+  <span class="lead-duration duration">0.049</span>
 
   </div>
 
@@ -313,15 +313,34 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief failed">
   <span class="keyword indention">Then</span>
   <span class="name">user is on home page</span>
   
-  <span class="lead-duration duration">0.004</span>
+  <span class="lead-duration duration">0.006</span>
 
   </div>
 
         
+
+  <div class="inner-level">
+    <div class="message indention">
+      <div data-toggle="collapse" class=" collapsable-control" data-target="#msg-3">
+          <a>java.lang.AssertionError: expected [Cogmento CRM] but found [Cogmento CRM1]</a>
+      </div>
+      <div id="msg-3" class="collapse collapsable-details  in ">
+        <pre>java.lang.AssertionError: expected [Cogmento CRM] but found [Cogmento CRM1]
+	at org.testng.Assert.fail(Assert.java:97)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+	at org.testng.Assert.assertEquals(Assert.java:118)
+	at org.testng.Assert.assertEquals(Assert.java:575)
+	at org.testng.Assert.assertEquals(Assert.java:585)
+	at stepDefinitions.LoginStepDefinition.user_is_on_hopme_page(LoginStepDefinition.java:65)
+	at &#10045;.Then user is on home page(login.feature:9)
+</pre>
+      </div>
+    </div>
+  </div>
 
 
         
@@ -334,11 +353,11 @@ $(document).ready(function() {
       </div>
           <div class="step">
         
-<div class="brief passed">
+<div class="brief skipped">
   <span class="keyword indention">Then</span>
   <span class="name">Close the browser</span>
   
-  <span class="lead-duration duration">0.667</span>
+  <span class="lead-duration duration">0.000</span>
 
   </div>
 
@@ -351,6 +370,21 @@ $(document).ready(function() {
         
 
         
+    <div class="embeddings inner-level">
+                <div class="embedding indention">
+        <div data-toggle="collapse" data-target="#embedding-4" class="collapsable-control">
+      <a>Attachment 1 (png)</a>
+      <a href="embeddings/embedding_-1661084348.png" download target="_blank">
+        <span class="download-button glyphicon glyphicon-download-alt"></span>
+      </a>
+    </div>
+    <div id="embedding-4" class="collapse collapsable-details">
+      <div class="embedding-content">
+        <img src="embeddings/embedding_-1661084348.png">
+      </div>
+    </div>
+  </div>
+        </div>
   
       </div>
       </div>
@@ -358,6 +392,39 @@ $(document).ready(function() {
 
 
     
+  <div class="inner-level hooks-after">
+        <div data-toggle="collapse" class=" collapsed  collapsable-control" data-target="#after-5">
+      
+<div class="brief passed">
+  <span class="keyword indention">Hooks</span>
+  <span class="name"></span>
+  
+
+       <i class="chevron fa fa-fw"></i>
+  </div>
+
+    </div>
+
+    <div id="after-5" class="inner-level collapse collapsable-details ">
+              <div class="hook">
+          <div class="brief passed">
+            <span class="keyword indention">After</span>
+                          <span class="location name">LoginStepDefinition.tearDown(Scenario)</span>
+                        
+  <span class="lead-duration duration">1.148</span>
+
+          </div>
+
+                      
+
+          
+                    
+
+          
+  
+        </div>
+          </div>
+  </div>
 
   </div>
 </div>

@@ -20,7 +20,7 @@ public class LogoutStepDefinition {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://ui.freecrm.com/");
-		driver.findElement(By.name("email")).sendKeys("anil.kumar2080@gmail.com");
+		driver.findElement(By.name("email1")).sendKeys("anil.kumar2080@gmail.com");
 		driver.findElement(By.name("password")).sendKeys("Test@1234");
 		WebElement loginBtn = driver.findElement(By.xpath("//*[@id=\"ui\"]/div/div/form/div/div[3]"));
 		JavascriptExecutor js = (JavascriptExecutor) driver;

@@ -1,2 +1,3 @@
 stepDefinitions\LoginStepDefinition.class
+stepDefinitions\LogoutStepDefinition.class
 MyRunner\TestRunner.class

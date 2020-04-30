@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" class="navigator-link" panel-name="suite-BDD_Test_Suite">
-              <span class="suite-name border-passed">BDD Test Suite</span>
+              <span class="suite-name border-failed">BDD Test Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,26 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 2 failed,   </span>
                   </li>
                   <li>
-                    <span class="method-list-title passed">Passed methods</span>
-                    <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-BDD_Test_Suite" class="hide-methods passed suite-BDD_Test_Suite"> (hide)</a> <!-- hide-methods passed suite-BDD_Test_Suite -->
-                      <a href="#" panel-name="suite-BDD_Test_Suite" class="show-methods passed suite-BDD_Test_Suite"> (show)</a> <!-- show-methods passed suite-BDD_Test_Suite -->
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-BDD_Test_Suite" class="hide-methods failed suite-BDD_Test_Suite"> (hide)</a> <!-- hide-methods failed suite-BDD_Test_Suite -->
+                      <a href="#" panel-name="suite-BDD_Test_Suite" class="show-methods failed suite-BDD_Test_Suite"> (show)</a> <!-- show-methods failed suite-BDD_Test_Suite -->
                     </span>
-                    <div class="method-list-content passed suite-BDD_Test_Suite">
+                    <div class="method-list-content failed suite-BDD_Test_Suite">
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-BDD_Test_Suite" title="MyRunner.TestRunner" hash-for-method="feature(Free CRM Login Feature)">feature(Free CRM Login Feature)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
-                        <img width="3%" src="passed.png"/>
+                        <img width="3%" src="failed.png"/>
                         <a href="#" class="method navigator-link" panel-name="suite-BDD_Test_Suite" title="MyRunner.TestRunner" hash-for-method="feature(Free CRM Logout Feature)">feature(Free CRM Logout Feature)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content passed suite-BDD_Test_Suite -->
+                    </div> <!-- method-list-content failed suite-BDD_Test_Suite -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -122,9 +122,9 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-BDD_Test_Suite" class="panel BDD_Test_Suite">
-          <div class="suite-BDD_Test_Suite-class-passed">
+          <div class="suite-BDD_Test_Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
+              <img src="failed.png"/>
               <span class="class-name">MyRunner.TestRunner</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -134,6 +134,19 @@
                   </a> <!-- feature(Free CRM Login Feature) -->
                   <span class="method-name">feature</span>
                   <span class="parameters">(Free CRM Login Feature)</span>
+                  <div class="stack-trace">cucumber.runtime.CucumberException: java.lang.AssertionError: expected [Cogmento CRM] but found [Cogmento CRM1]
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at MyRunner.TestRunner.feature(TestRunner.java:35)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.AssertionError: expected [Cogmento CRM] but found [Cogmento CRM1]
+	at stepDefinitions.LoginStepDefinition.user_is_on_hopme_page(LoginStepDefinition.java:65)
+	at ✽.Then user is on home page(login.feature:9)
+... Removed 23 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Feature)                  </em>
                 </div> <!-- method-content -->
@@ -144,12 +157,51 @@
                   </a> <!-- feature(Free CRM Logout Feature) -->
                   <span class="method-name">feature</span>
                   <span class="parameters">(Free CRM Logout Feature)</span>
+                  <div class="stack-trace">cucumber.runtime.CucumberException: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;email1&apos;]&quot;}
+  (Session info: chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-OP2ETL3&apos;, ip: &apos;192.168.1.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\ANILKU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53380}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: f7172d2357dbb52002271567ea5bd840
+*** Element info: {Using=name, value=email1}
+	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
+	at MyRunner.TestRunner.feature(TestRunner.java:35)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;email1&apos;]&quot;}
+  (Session info: chrome=81.0.4044.129)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-OP2ETL3&apos;, ip: &apos;192.168.1.8&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_191&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 81.0.4044.129, chrome: {chromedriverVersion: 81.0.4044.69 (6813546031a4b..., userDataDir: C:\Users\ANILKU~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:53380}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:virtualAuthenticators: true}
+Session ID: f7172d2357dbb52002271567ea5bd840
+*** Element info: {Using=name, value=email1}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at stepDefinitions.LogoutStepDefinition.user_already_on_home_page(LogoutStepDefinition.java:23)
+	at ✽.Given user is on home Page(logout.feature:5)
+... Removed 22 stack frames
+</div> <!-- stack-trace -->
                   <em>
 (Runs Cucumber Feature)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-BDD_Test_Suite-class-passed -->
+          </div> <!-- suite-BDD_Test_Suite-class-failed -->
         </div> <!-- panel BDD_Test_Suite -->
         <div panel-name="test-xml-BDD_Test_Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
@@ -214,16 +266,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'feature')
 data.setCell(0, 2, 'MyRunner.TestRunner')
-data.setCell(0, 3, 10603);
+data.setCell(0, 3, 11865);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'feature')
 data.setCell(1, 2, 'MyRunner.TestRunner')
-data.setCell(1, 3, 8370);
+data.setCell(1, 3, 9559);
 window.suiteTableData['BDD_Test_Suite']= { tableData: data, tableDiv: 'times-div-BDD_Test_Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 19 seconds</span>
+              <span class="suite-total-time">Total running time: 22 seconds</span>
               <div id="times-div-BDD_Test_Suite">
               </div> <!-- times-div-BDD_Test_Suite -->
             </div> <!-- times-div -->
@@ -255,16 +307,20 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">feature(Free CRM Login Feature)</span>
-                <span class="method-start">313 ms</span>
+                <span class="method-start">519 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">feature(Free CRM Logout Feature)</span>
-                <span class="method-start">10918 ms</span>
+                <span class="method-start">12396 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDownClass</span>
-                <span class="method-start">19288 ms</span>
+                <span class="method-start">21967 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

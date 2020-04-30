@@ -2,12 +2,16 @@ package stepDefinitions;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 
+import cucumber.api.Scenario;
+import cucumber.api.java.After;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
@@ -15,6 +19,17 @@ import cucumber.api.java.en.When;
 public class LoginStepDefinition {
 
 	WebDriver driver;
+	
+	@After
+	public void tearDown(Scenario scenario) {
+		System.out.println("Inside teardown");
+	    if (scenario.isFailed()) {
+	      // Take a screenshot...
+	      final byte[] screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
+	   // embed it in the report.
+	      scenario.embed(screenshot, "image/png"); 
+	    }
+	}
 
 	@Given("^user is already on Login Page$")
 	public void user_already_on_login_page() {
@@ -47,7 +62,7 @@ public class LoginStepDefinition {
 	public void user_is_on_hopme_page() {
 		String title = driver.getTitle();
 		System.out.println("Home Page title ::" + title);
-		Assert.assertEquals("Cogmento CRM", title);
+		Assert.assertEquals("Cogmento CRM1", title);
 	}
 
 	@Then("^Close the browser$")
